@@ -1,0 +1,55 @@
+{
+    "name": "miltiadis/laravel-payment",
+    "keywords": [
+        "laravel"
+    ],
+    "homepage": "https://github.com/konmiltos/laravel-payment",
+    "authors": [
+        {
+            "name": "Miltiadis",
+            "email": "konmiltos@gmail.com",
+            "homepage" : ""
+        }
+    ],
+	"license": "MIT",
+        "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+		"php": ">=7.0.0",
+		"guzzlehttp/guzzle": "~5.0|~6.0",
+        "illuminate/contracts": "~5.0",
+        "illuminate/http": "~5.0",
+        "illuminate/support": "5.5.*",
+        "illuminate/view": "5.5.*",
+        "paypal/rest-api-sdk-php": "*"
+    },
+    "require-dev": {
+	    "laravel/framework": "5.5.*",
+        "phpunit/phpunit": "6.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Miltiadis\\Payment\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            
+        }
+    },
+"autoload-dev": {
+        "psr-4": {
+            "PaymentTests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Miltiadis\\Payment\\PaymentServiceProvider"
+            ],
+            "aliases": {
+                "Payment": "Miltiadis\\Payment\\Facades\\Payment"
+            }
+        }
+    }
+}
